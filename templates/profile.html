@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Login {%endblock%}
+
+{% block content %}
+
+<div class="login" id="login-system">
+    
+    <form action="{{ url_for('login') }}" method="POST">
+        <img src="{{url_for('static', filename = 'images/placeholder-profile-icon-20tehfawxt5eihco.png')}}" alt="Profile"><br><br>
+        <h2>Login</h2><br><br>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div><br>
+
+        <h3> Not a member? <a href="#">Sign up</a></h3>
+    </form>
+</div>
+
+{%endblock%}

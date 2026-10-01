@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> {% block title %} Subovery {% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Groups</a></li>
+                    <li><a href="">People</a></li>
+                    <li id="Profile"><a href="{{ url_for('login') }}">Profile</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        {% block content %}
+
+
+        {%endblock%}
+    </body>
+</html>
